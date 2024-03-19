@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2024 at 03:38 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: Mar 19, 2024 at 10:40 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,34 +31,35 @@ CREATE TABLE `mahasiswa` (
   `id` int(11) NOT NULL,
   `nim` varchar(255) NOT NULL,
   `nama` varchar(255) NOT NULL,
-  `jenis_kelamin` varchar(255) NOT NULL
+  `jenis_kelamin` varchar(255) NOT NULL,
+  `status_pekerjaan` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`id`, `nim`, `nama`, `jenis_kelamin`) VALUES
-(1, '2203999', 'Amelia Zalfa Julianti', 'Perempuan'),
-(2, '2202292', 'Muhammad Iqbal Fadhilah', 'Laki-laki'),
-(3, '2202346', 'Muhammad Rifky Afandi', 'Laki-laki'),
-(4, '2210239', 'Muhammad Hanif Abdillah', 'Laki-laki'),
-(5, '2202046', 'Nurainun', 'Perempuan'),
-(6, '2205101', 'Kelvin Julian Putra', 'Laki-laki'),
-(7, '2200163', 'Rifanny Lysara Annastasya', 'Perempuan'),
-(8, '2202869', 'Revana Faliha Salma', 'Perempuan'),
-(9, '2209489', 'Rakha Dhifiargo Hariadi', 'Laki-laki'),
-(10, '2203142', 'Roshan Syalwan Nurilham', 'Laki-laki'),
-(11, '2200311', 'Raden Rahman Ismail', 'Laki-laki'),
-(12, '2200978', 'Ratu Syahirah Khairunnisa', 'Perempuan'),
-(13, '2204509', 'Muhammad Fahreza Fauzan', 'Laki-laki'),
-(14, '2205027', 'Muhammad Rizki Revandi', 'Laki-laki'),
-(15, '2203484', 'Arya Aydin Margono', 'Laki-laki'),
-(16, '2200481', 'Marvel Ravindra Dioputra', 'Laki-laki'),
-(17, '2209889', 'Muhammad Fadlul Hafiizh', 'Laki-laki'),
-(18, '2206697', 'Rifa Sania', 'Perempuan'),
-(19, '2207260', 'Imam Chalish Rafidhul Haque', 'Laki-laki'),
-(20, '2204343', 'Meiva Labibah Putri', 'Perempuan');
+INSERT INTO `mahasiswa` (`id`, `nim`, `nama`, `jenis_kelamin`, `status_pekerjaan`) VALUES
+(1, '2203999', 'Amelia Zalfa Julianti', 'Perempuan', 1),
+(2, '2202292', 'Muhammad Iqbal Fadhilah', 'Laki-laki', 0),
+(3, '2202346', 'Muhammad Rifky Afandi', 'Laki-laki', 0),
+(4, '2210239', 'Muhammad Hanif Abdillah', 'Laki-laki', 0),
+(5, '2202046', 'Nurainun', 'Perempuan', 1),
+(6, '2205101', 'Kelvin Julian Putra', 'Laki-laki', 0),
+(7, '2200163', 'Rifanny Lysara Annastasya', 'Perempuan', 1),
+(8, '2202869', 'Revana Faliha Salma', 'Perempuan', 0),
+(9, '2209489', 'Rakha Dhifiargo Hariadi', 'Laki-laki', 0),
+(10, '2203142', 'Roshan Syalwan Nurilham', 'Laki-laki', 1),
+(11, '2200311', 'Raden Rahman Ismail', 'Laki-laki', 1),
+(12, '2200978', 'Ratu Syahirah Khairunnisa', 'Perempuan', 0),
+(13, '2204509', 'Muhammad Fahreza Fauzan', 'Laki-laki', 0),
+(14, '2205027', 'Muhammad Rizki Revandi', 'Laki-laki', 0),
+(15, '2203484', 'Arya Aydin Margono', 'Laki-laki', 0),
+(16, '2200481', 'Marvel Ravindra Dioputra', 'Laki-laki', 0),
+(17, '2209889', 'Muhammad Fadlul Hafiizh', 'Laki-laki', 0),
+(18, '2206697', 'Rifa Sania', 'Perempuan', 0),
+(19, '2207260', 'Imam Chalish Rafidhul Haque', 'Laki-laki', 0),
+(20, '2204343', 'Meiva', 'Perempuan', 1);
 
 --
 -- Indexes for dumped tables
@@ -78,7 +79,7 @@ ALTER TABLE `mahasiswa`
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
